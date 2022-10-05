@@ -1,29 +1,30 @@
-import { createGlobalStyle } from 'styled-components';
+import { globalCss } from './theme/stitches.config';
 
-export const GlobalStyle = createGlobalStyle`
-  *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  body,#root{
-    width: 100%;
-    height: 100vh;
+export const globalCSS = globalCss({
+  '*': {
+    padding: 0,
+    margin: 0,
+    boxSizing: 'border-box',
+  },
+  'body,#root,html': {
+    width: '100%',
+    height: '100%',
 
-    font-size: 1rem;
-  }
-  input,button{
-    border: 0;
-    outline:0;
-  }
-  button{
-    cursor: pointer;
-  }
-  a{
-    text-decoration: none;
-    color: inherit;
-  }
-  ul,ol{
-    list-style: none;
-  }
-`;
+    fontSize: ' 1rem',
+    fontFamily: '$cairo',
+  },
+  'input,button': {
+    border: 0,
+    outline: 0,
+  },
+  button: {
+    cursor: 'pointer',
+  },
+  a: {
+    textDecoration: 'none',
+    color: 'inherit',
+  },
+  'ul,ol': {
+    listStyle: 'none',
+  },
+});

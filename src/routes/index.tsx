@@ -1,9 +1,15 @@
-// here's the routes
-// yarn add react-router-dom
-// import {BrowserRouter, Routes as Router, Route} from 'react-router-dom'
+import { BrowserRouter, Routes as Router, Route } from 'react-router-dom';
 
 import { Home } from '../pages/Home';
+import { CreateAccount } from '../pages/CreateAccount';
 
-export function Router() {
-  return <Home />;
+export function Routes() {
+  return (
+    <BrowserRouter>
+      <Router>
+        <Route path="/" element={<Home />} />
+        <Route path="/create" element={<CreateAccount />} />
+      </Router>
+    </BrowserRouter>
+  );
 }
