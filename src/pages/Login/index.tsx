@@ -1,5 +1,6 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { HiArrowNarrowLeft } from 'react-icons/hi';
+import { useNavigate } from 'react-router-dom';
 
 import { LogoFillWhite } from '../../utils/assets/logoFillWhite';
 
@@ -22,6 +23,7 @@ interface IFormProps {
 
 export function Login() {
   const { register, handleSubmit, reset } = useForm<IFormProps>();
+  const navigate = useNavigate();
 
   const onSubmit: SubmitHandler<IFormProps> = (data) => {
     console.log(data);
@@ -34,7 +36,7 @@ export function Login() {
       </Header>
       <Main>
         <HeaderMain>
-          <Button>
+          <Button onClick={() => navigate('/')}>
             <HiArrowNarrowLeft color={theme.colors.red600.value} />
           </Button>
           <h3>Entre na sua conta</h3>

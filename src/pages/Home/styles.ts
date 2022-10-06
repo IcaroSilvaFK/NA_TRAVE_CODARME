@@ -1,21 +1,29 @@
 import { styled } from '../../styles/theme/stitches.config';
 
 export const Container = styled('div', {
-  background: '$red800',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  width: '100%',
-  height: '100%',
+
+  height: '100vh',
+  background: '$red800',
+
+  overflowY: 'auto',
   svg: {
     width: '150px',
+  },
+
+  '&::-webkit-scrollbar': {
+    display: 'none',
   },
 });
 
 export const Image = styled('img', {
-  maxWidth: '560px',
+  maxWidth: '486px',
+  height: '486px',
+  objectFit: 'contain',
   '@media (max-width: 500px)': {
-    maxWidth: '80%',
+    maxWidth: '100%',
   },
 });
 

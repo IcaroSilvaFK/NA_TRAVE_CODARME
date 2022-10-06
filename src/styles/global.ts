@@ -9,7 +9,6 @@ export const globalCSS = globalCss({
   'body,#root,html': {
     width: '100%',
     height: '100%',
-
     fontSize: ' 1rem',
     fontFamily: '$cairo',
   },
